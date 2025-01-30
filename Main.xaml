@@ -95,12 +95,17 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1157.6000000000001,1140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1157.6000000000001,1347.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="./InputExcel/" Name="InputFileLocation" />
       <Variable x:TypeArguments="x:String" Default="./OutputPDF/" Name="OutFileLoc" />
       <Variable x:TypeArguments="sd:DataTable" Name="DTCandidateDetails" />
       <Variable x:TypeArguments="x:String" Default="https://airtable.com/appgYJ3t6l85EtFLZ/shrwEDRqDCHIBxM0d" Name="HRSystemFormURL" />
+      <Variable x:TypeArguments="x:String" Name="HRSystemTableURL">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">https://airtable.com/appgYJ3t6l85EtFLZ/tbl7mkWk1u8ovFTY2/viw9vf2aZr7hBEOTT?blocks=hide</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -371,6 +376,11 @@
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_InputDT">[DTCandidateDetails]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_url" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConfirmStatusHRSystem - Invoke Workflow File (ConfirmStatusHRSystem.xaml)" sap:VirtualizedContainerService.HintSize="600,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ConfirmStatusHRSystem.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_url">[HRSystemTableURL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SendEmail - Invoke Workflow File (Workflows\SendEmail.xaml)" sap:VirtualizedContainerService.HintSize="600,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflows\SendEmail.xaml">
