@@ -1,0 +1,6 @@
+﻿{
+    "SMTP_Server": "smtp.gmail.com",
+    "SMTP_Port": 465,
+    "Email_Address": "HROnboardingRPA@gmail.com",
+    "Email_Password": "parolaRP@"
+}
