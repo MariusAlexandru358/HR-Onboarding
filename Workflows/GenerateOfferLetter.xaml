@@ -255,7 +255,7 @@ The UiPath Team"]</InArgument>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <p:WordAppendText DisplayName="Append Text" sap:VirtualizedContainerService.HintSize="433.6,138.4" sap2010:WorkflowViewState.IdRef="WordAppendText_1" Text="[PDFBody]" />
-                    <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[in_OutputFileLocation+&quot;\&quot;+FirstName+&quot;_&quot;+LastName]" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+                    <p:WordExportToPdf DisplayName="Save Document as PDF" FilePath="[in_OutputFileLocation+&quot;\&quot;+FirstName+LastName]" sap:VirtualizedContainerService.HintSize="433.6,134.4" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
                   </Sequence>
                 </ActivityAction>
               </p:WordApplicationScope.Body>

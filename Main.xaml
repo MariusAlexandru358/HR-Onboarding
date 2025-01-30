@@ -110,7 +110,11 @@
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart sap:VirtualizedContainerService.HintSize="600,656.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
-        <Variable x:TypeArguments="x:String" Default="conf.xlsx" Name="WorkbookPath" />
+        <Variable x:TypeArguments="x:String" Name="WorkbookPath">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">Config\conf.xlsx</Literal>
+          </Variable.Default>
+        </Variable>
         <Variable x:TypeArguments="x:String" Default="./Word/" Name="WordFolder" />
       </Flowchart.Variables>
       <sap:WorkflowViewStateService.ViewState>
@@ -133,7 +137,7 @@
             <av:PointCollection x:Key="ConnectorLocation">680,225 680,255 690,255 690,325</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ReadDataWorkflow - Invoke Workflow File (ReadDataWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ReadDataWorkflow.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ReadDataWorkflow - Invoke Workflow File (ReadDataWorkflow.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\ReadDataWorkflow.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <OutArgument x:TypeArguments="sd:DataTable" x:Key="Out_DTCandidateDetails">[DTCandidateDetails]</OutArgument>
             <InArgument x:TypeArguments="x:String" x:Key="In_InputExcel_loc">[InputFileLocation]</InArgument>
@@ -153,7 +157,7 @@
                 <av:PointCollection x:Key="ConnectorLocation">690,395 690,445</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GenerateOfferLetter - Invoke Workflow File (GenerateOfferLetter.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GenerateOfferLetter.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GenerateOfferLetter - Invoke Workflow File (GenerateOfferLetter.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Workflows\GenerateOfferLetter.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="sd:DataTable" x:Key="In_CandidateDetails">[DTCandidateDetails]</InArgument>
                 <InArgument x:TypeArguments="x:String" x:Key="in_OutputFileLocation">[OutFileLoc]</InArgument>
@@ -330,7 +334,7 @@
             <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadXLSX - Invoke Workflow File (ReadXLSX.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ReadXLSX.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadXLSX - Invoke Workflow File (ReadXLSX.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Workflows\ReadXLSX.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="x:String" x:Key="in_FolderPath">[InputFileLocation]</InArgument>
             <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">[DTCandidateDetails]</OutArgument>
@@ -352,7 +356,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadXLSX - Invoke Workflow File (ReadXLSX.xaml)" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ReadXLSX.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ReadXLSX - Invoke Workflow File (ReadXLSX.xaml)" sap:VirtualizedContainerService.HintSize="416,197.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Workflows\ReadXLSX.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_DT">[DTCandidateDetails]</OutArgument>
               <InArgument x:TypeArguments="x:String" x:Key="in_FilePath">candidates_data.xlsx</InArgument>
@@ -368,13 +372,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UpdateHRSystem - Invoke Workflow File (UpdateHRSystem.xaml)" sap:VirtualizedContainerService.HintSize="600,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="UpdateHRSystem.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="UpdateHRSystem - Invoke Workflow File (UpdateHRSystem.xaml)" sap:VirtualizedContainerService.HintSize="600,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Workflows\UpdateHRSystem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_InputDT">[DTCandidateDetails]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_url">[HRSystemFormURL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConfirmStatusHRSystem - Invoke Workflow File (ConfirmStatusHRSystem.xaml)" sap:VirtualizedContainerService.HintSize="600,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="ConfirmStatusHRSystem.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="ConfirmStatusHRSystem - Invoke Workflow File (ConfirmStatusHRSystem.xaml)" sap:VirtualizedContainerService.HintSize="600,206.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\ConfirmStatusHRSystem.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="in_url">[HRSystemTableURL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>

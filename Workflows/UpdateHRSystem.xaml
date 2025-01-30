@@ -112,15 +112,11 @@
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="UpdateHRSystem Sequence" sap:VirtualizedContainerService.HintSize="1157.6000000000001,2699.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="UpdateHRSystem Sequence" sap:VirtualizedContainerService.HintSize="1172,2699.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="InputDT" />
       <Variable x:TypeArguments="x:String" Default="./InputExcel/candidates_data.xlsx" Name="WorkbookPath" />
-      <Variable x:TypeArguments="x:Boolean" Name="isFormLoaded">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Boolean" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Boolean" Default="False" Name="isFormLoaded" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -195,11 +191,7 @@
           <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="793.6,1442.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="counter" />
-              <Variable x:TypeArguments="x:Boolean" Name="isEmailValid">
-                <Variable.Default>
-                  <Literal x:TypeArguments="x:Boolean" />
-                </Variable.Default>
-              </Variable>
+              <Variable x:TypeArguments="x:Boolean" Default="False" Name="isEmailValid" />
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
