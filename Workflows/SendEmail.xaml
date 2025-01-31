@@ -130,7 +130,7 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1172,1876.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1157.6000000000001,1876.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="isEmailSent" />
     </Sequence.Variables>
@@ -198,7 +198,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Body="[$&quot;Hello, {candidateName}, &#xD;&#xA;&#xD;&#xA;We are very pleased to inform you that you have been accepted to be part of our team here at UiPath. You can find the offer letter that contains all the information attached in this mail.&#xD;&#xA;&#xD;&#xA;We cannot wait for you to choosing us.&#xD;&#xA;&#xD;&#xA;Thanks for trusting us,&#xD;&#xA;the UiPath Team.&#xD;&#xA;&quot;]" ConnectionId="03b79561-cf54-49f2-ad15-04730ec0869d" ContinueOnError="True" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,340.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" ResourceAttachments="[attachmentPath]" SecureConnection="Auto" Subject="Welcome to UiPath - Your Offer Letter" To="[candidateEmail]" UseISConnection="True">
+                          <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" Email="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" Password="{x:Null}" Port="{x:Null}" ReplyTo="{x:Null}" ResourceAttachmentList="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" Server="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" AttachmentInputMode="Existing" Body="[$&quot;Hello, {candidateName}, &#xA;&#xA;We are very pleased to inform you that you have been accepted to be part of our team here at UiPath. You can find the offer letter that contains all the information attached in this mail.&#xA;&#xA;We cannot wait for you to choosing us.&#xA;&#xA;Thanks for trusting us,&#xA;the UiPath Team.&#xA;&quot;]" ConnectionId="ac3b73a3-ed74-4183-9f78-459b4ffba087" ContinueOnError="True" DisplayName="Send SMTP Email" EnableSSL="True" sap:VirtualizedContainerService.HintSize="433.6,340.8" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" ResourceAttachments="[attachmentPath]" SecureConnection="Auto" Subject="Welcome to UiPath - Your Offer Letter" To="[candidateEmail]" UseISConnection="True">
                             <ui:SendMail.AttachmentsBackup>
                               <usau:BackupSlot x:TypeArguments="umame:AttachmentInputMode" StoredValue="Existing">
                                 <usau:BackupSlot.BackupValues>

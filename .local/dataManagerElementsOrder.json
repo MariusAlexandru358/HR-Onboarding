@@ -1,0 +1,72 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "HRSystemTableURL&Sequence_1",
+        "InputFileLocation&Sequence_1",
+        "OutFileLoc&Sequence_1",
+        "DTCandidateDetails&Sequence_1",
+        "HRSystemFormURL&Sequence_1",
+        "WorkbookPath&Flowchart_1",
+        "WordFolder&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "UpdateHRSystem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "isFormLoaded&Sequence_1",
+        "isEmailValid&Sequence_3",
+        "InputDT&Sequence_1",
+        "WorkbookPath&Sequence_1",
+        "counter&Sequence_3",
+        "LabelName&Sequence_4",
+        "InputValue&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_url",
+        "in_InputDT"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ConfirmStatusHRSystem.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "new_status&Sequence_6",
+        "Departments&Sequence_3",
+        "department_value&Sequence_6",
+        "bMatchedRegex&Sequence_6",
+        "variable4&Sequence_6",
+        "value&Sequence_6",
+        "variable2&Sequence_6",
+        "value&Sequence_8",
+        "LabelName&Sequence_6",
+        "counter&Sequence_6",
+        "ExtractDataTable&Sequence_1",
+        "credentials_password&Sequence_1",
+        "credentials_email&Sequence_1",
+        "in_url&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_url"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
